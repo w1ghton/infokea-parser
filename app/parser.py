@@ -39,7 +39,10 @@ def parse(url: str = "https://www.infokea.narod.ru/podstr_5.htm") -> list:
                                             f"https://www.infokea.narod.ru/{task_url}"
                                         )
                                     res_template[t]["tasks"].append(
-                                        {"name": task_name, "url": task_url}
+                                        {
+                                            "name": task_name.capitalize(),
+                                            "url": task_url,
+                                        }
                                     )
     return res_template
 
